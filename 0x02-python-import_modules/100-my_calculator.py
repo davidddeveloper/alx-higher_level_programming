@@ -30,20 +30,22 @@ def calculator(a, b, operator):
 argv = sys.argv
 argv_len = len(argv)
 
-if argv_len < 4:
-    print("Usage: ./100-my_calculator.py <a> <operator> <b>")
-    exit(1)
+if __name__ == '__main__':
 
-else:
-    operator = argv[2]
-    operators = ["+", "-", "*", "/"]
-    number_one = int(argv[1])
-    number_two = int(argv[3])
-
-    for oper in operators:
-        if operator == oper:
-            calculator(number_one, number_two, operator)
+    if argv_len < 4:
+        print("Usage: ./100-my_calculator.py <a> <operator> <b>")
+        exit(1)
 
     else:
-        print("Unknown operator. Available operators: +, -, * and /")
-        exit(1)
+        operator = argv[2]
+        operators = ["+", "-", "*", "/"]
+        number_one = int(argv[1])
+        number_two = int(argv[3])
+
+        for oper in operators:
+            if operator == oper:
+                calculator(number_one, number_two, operator)
+
+        else:
+            print("Unknown operator. Available operators: +, -, * and /")
+            exit(1)
