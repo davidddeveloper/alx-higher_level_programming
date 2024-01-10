@@ -11,4 +11,3 @@ if __name__ == '__main__':
         item = int(argv[n])
         sum += item
     print(sum)
-
