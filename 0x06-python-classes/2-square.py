@@ -1,10 +1,29 @@
 #!/usr/bin/python3
+"""2-square.py
+
+This module provide functionality related to squares
+
+classed define in module:
+    - Square: Represents a square and provides method for calculations
+
+"""
+
+
 class Square:
+    """Represents a square and provides method for calculations
+
+    Args:
+        - size: size of square
+
+    Attributes:
+        - __size: size of square
+
+    """
+
     def __init__(self, size=0):
-        try:
-            self.__size = int(size)
-        except Exception:
-            raise TypeError("size must be an integer")
+        if size == f"{size}":
+            raise TypeError("size must be an integer") from None
+        elif size < 0:
+            raise ValueError("size must be >= 0") from None
         else:
-            if self.__size < 0:
-                raise ValueError("size must be >= 0")
+            self.__size = size
