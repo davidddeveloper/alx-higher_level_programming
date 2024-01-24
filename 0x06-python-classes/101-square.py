@@ -94,3 +94,6 @@ class Square:
             if self.__position[1] <= 0:
                 print(" " * self.__position[0], end="")
             print("#" * self.__size)
+
+    def __repr__(self):
+        return f"{self.my_print()}"
