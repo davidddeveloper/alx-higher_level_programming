@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """100-singly_linked_list.py
 
-This module provides functionality related to the creation of singly linked list
+This module provides functionality related to singly linked list
 
 classes it define:
     Node: defines a node of a singly linked list
@@ -26,7 +26,6 @@ class Node:
     def __init__(self, data, next_node=None):
         self.__data = data
         self.__next_node = next_node
-
 
     @property
     def data(self):
@@ -53,8 +52,8 @@ class Node:
 
     @next_node.setter
     def next_node(self, node):
-        if node is not None or type(node) is not Node:
-            raise TypeError("next_node must be a Node object") from None
+        #if node is not None or isinstance(node, Node):
+            #raise TypeError("next_node must be a Node object") from None
         self.__next_node = node
 
 
@@ -62,7 +61,7 @@ class SinglyLinkedList:
     """Represent a singlylinkedlist
 
     Attributes:
-        - __head: a Node object representing the start of the singly linked list
+        - __head: a Node representing the start of the singly linked list
         - __current: a Node object for traversing the list
         - new_node: a Node object
 
@@ -72,10 +71,7 @@ class SinglyLinkedList:
     """
 
     def __init__(self):
-        print("Initializing...")
         self.__head = None
-        self.current = None
-        self.new_node = Node(0, None)
 
     def sorted_insert(self, value):
         """inserts a new Node into the correct sorted position in the list
@@ -86,30 +82,41 @@ class SinglyLinkedList:
         Returns:
             None
         """
-        self.new_node.data = value
 
-        if self.__head is None:
-            self.__head = self.new_node
-            return
+        self._new_node = Node(value)
 
-        self.current = self.__head
+        if self.__head is None or value <= self.__head.data:
+            self._new_node.next_node = self.__head
+            self.__head = self._new_node
 
-        while (self.current != None):
-            self.current = self.current.next_node
+        else:
+            current = self.__head
 
-        self.current = self.new_node
-        print("data of head", self.__head.data)
+            while current.next_node is not None and \
+                    current.next_node.data < value:
+                current = current.next_node
+
+            self._new_node.next_node = current.next_node
+            current.next_node = self._new_node
+
+    @property
+    def print_list(self):
+        current = self.__head
+        while current is not None:
+            print(current.data)
+            current = current.next_node
 
     def __repr__(self):
         """String reprsentation of the list
 
         Returns:
             (str): string representation of the instance
-        """
-        print("value of head in repr", self.__head.data)
 
-        while (self.__head != None):
-            print("{}".format(self.__head.data))
-            self.__head = self.__head.next_node
+        """
+
+        current = self.__head
+        while current is not None:
+            print(current.data)
+            current = current.next_node
 
         return f""
