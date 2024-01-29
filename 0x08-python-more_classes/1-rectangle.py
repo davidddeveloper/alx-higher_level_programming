@@ -55,7 +55,7 @@ class Rectangle:
                 - value: value of width
 
         """
-        if isinstance(value, int) != True:
+        if type(value) != int:
             raise ValueError("height must be an integer") from None
         if value < 0:
             raise ValueError("width must be >= 0") from None
