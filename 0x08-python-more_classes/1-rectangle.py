@@ -22,16 +22,16 @@ class Rectangle:
         - __height: height of rectangle
     """
     def __init__(self, width=0, height=0):
-        self.width = width;
-        self.height = height;
+        self.width = width
+        self.height = height
 
     @property
     def width(self):
-        return self.__width;
+        return self.__width
 
     @property
     def height(self):
-        return self.__height;
+        return self.__height
 
     @width.setter
     def width(self, value):
@@ -40,10 +40,10 @@ class Rectangle:
             Args:
                 - value: value of width
         """
-        
+
         if width < 0:
             raise ValueError("width must be >= 0") from None
-        self.__width = value;
+        self.__width = value
 
     @height.setter
     def height(self, value):
@@ -55,4 +55,4 @@ class Rectangle:
         """
         if height < 0:
             raise ValueError("width must be >= 0") from None
-        self.__height = height;
+        self.__height = height
