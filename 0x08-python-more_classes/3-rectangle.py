@@ -81,6 +81,6 @@ class Rectangle:
 
         return (rect)
 
-    def __repr__(self)i:
+    def __repr__(self):
         """An official representation of the string"""
         return f"{type(self)}"
