@@ -41,7 +41,7 @@ class Rectangle:
                 - value: value of width
         """
 
-        if width < 0:
+        if value < 0:
             raise ValueError("width must be >= 0") from None
         self.__width = value
 
@@ -53,6 +53,6 @@ class Rectangle:
                 - value: value of width
 
         """
-        if height < 0:
+        if value < 0:
             raise ValueError("width must be >= 0") from None
-        self.__height = height
+        self.__height = value
