@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 """0-rectangle.py
     This module containes function classes related to Rectangle
 
