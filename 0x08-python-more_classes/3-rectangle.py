@@ -74,7 +74,7 @@ class Rectangle:
         rect = ""
         for i in range(self.height):
             rect += "#" * self.width
-            
+
             if i != (self.height - 1):
                 rect += "\n"
 
@@ -82,4 +82,3 @@ class Rectangle:
 
     def __repr__(self):
         return f"{type(self)}"
-    
