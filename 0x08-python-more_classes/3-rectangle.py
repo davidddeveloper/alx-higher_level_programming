@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""1-rectangle.py
+"""3-rectangle.py
     This module containes function classes related to Rectangle
 
     classes define in it:
