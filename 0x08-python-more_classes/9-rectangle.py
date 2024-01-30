@@ -100,8 +100,7 @@ class Rectangle:
 
     @classmethod
     def square(cls, size=0):
-        self.width = size
-        self.height = size
+        return Rectangle(size, size)
 
     def __str__(self):
         """A more informal and nicely printed representation of the string
