@@ -55,10 +55,11 @@ class Rectangle:
                 - value: value of width
 
         """
+
         if type(value) != int:
             raise TypeError("height must be an integer") from None
         if value < 0:
-            raise ValueError("width must be >= 0") from None
+            raise ValueError("height must be >= 0") from None
         self.__height = value
 
     def area(self):
@@ -71,7 +72,10 @@ class Rectangle:
         return (2 * self.width) + (2 * self.height)
 
     def __str__(self):
-        """A more informal and nicely printed representation of the string"""
+        """A more informal and nicely printed representation of the string
+
+        """
+
         rect = ""
         for i in range(self.height):
             rect += "#" * self.width
@@ -82,5 +86,8 @@ class Rectangle:
         return (rect)
 
     def __repr__(self):
-        """An official representation of the string"""
+        """An official representation of the string
+
+        """
+
         return f"{type(self)}"
