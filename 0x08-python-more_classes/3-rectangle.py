@@ -93,6 +93,6 @@ class Rectangle:
 
         """
 
-        result = f"{self.__module__}.{self.__class__.__name__}"
-        result += f" object at {hex(id(self))}"
+        result = "{}.{}".format(self.__module__, self.__class__.__name__)
+        result += " object at {}".format(hex(id(self)))
         return result
