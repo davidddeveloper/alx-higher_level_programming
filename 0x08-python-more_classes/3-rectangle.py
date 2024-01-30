@@ -90,4 +90,6 @@ class Rectangle:
 
         """
 
-        return f"{type(self)}"
+        result = f"{self.__module__}.{self.__class__.__name__}"
+        result += f" object at {hex(id(self))}"
+        return result
