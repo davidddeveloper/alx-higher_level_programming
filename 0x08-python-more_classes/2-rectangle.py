@@ -55,6 +55,7 @@ class Rectangle:
                 - value: value of width
 
         """
+
         if type(value) != int:
             raise TypeError("height must be an integer")
         if value < 0:
@@ -65,7 +66,11 @@ class Rectangle:
         return self.width * self.height
 
     def perimeter(self):
+        """Represent the perimeter of the rectangle
+
+        """
+
         if self.width == 0 or self.width == 0:
             return 0
 
-        return (2 * self.width) + (2 * self.height)
+        return ((2 * self.width) + (2 * self.height))
