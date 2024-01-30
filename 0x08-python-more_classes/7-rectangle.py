@@ -23,11 +23,11 @@ class Rectangle:
     """
 
     number_of_instances = 0
-    print_symbol = "#"
 
     def __init__(self, width=0, height=0):
         self.width = width
         self.height = height
+        self.__print_symbol = "#"
         Rectangle.number_of_instances += 1
 
     def __del__(self):
@@ -41,6 +41,10 @@ class Rectangle:
     @property
     def height(self):
         return self.__height
+
+    @property
+    def print_symbol(self):
+        return self.__print_symbol
 
     @width.setter
     def width(self, value):
@@ -71,6 +75,14 @@ class Rectangle:
             raise ValueError("height must be >= 0") from None
         self.__height = value
 
+    @print_symbol.setter
+    def print_symbol(self, value):
+        """Represent the symbol to use in __str__
+
+        """
+
+        self.__print_symbol = str(value)
+
     def area(self):
         return self.width * self.height
 
@@ -90,7 +102,7 @@ class Rectangle:
             return rect
 
         for i in range(self.height):
-            rect += print_symbol * self.width
+            rect += self.__print_symbol * self.width
 
             if i != (self.height - 1):
                 rect += "\n"
