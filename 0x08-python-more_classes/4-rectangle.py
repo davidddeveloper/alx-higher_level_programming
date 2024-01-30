@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""3-rectangle.py
+"""4-rectangle.py
     This module containes function classes related to Rectangle
 
     classes define in it:
@@ -93,6 +93,4 @@ class Rectangle:
 
         """
 
-        result = f"{self.__module__}.{self.__class__.__name__}"
-        result += f" object at {hex(id(self))}"
-        return result
+        return f"{self.__class__.__name__}({self.width}, {self.height})"
