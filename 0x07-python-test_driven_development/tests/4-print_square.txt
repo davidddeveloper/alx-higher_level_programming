@@ -29,4 +29,4 @@
 
 	>>> print_square(10, 20, 30)
 	Traceback (most recent call last):
-	TypeError: print_square() takes 1 positional argument but 3 were given 
+	TypeError: print_square() takes 1 positional argument but 3 were given
