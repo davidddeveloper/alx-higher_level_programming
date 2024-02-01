@@ -32,9 +32,14 @@ def matrix_divided(matrix, div):
         new_matrix_row = []
         for number in row:
             if type(number) != int and type(number) != float:
-                raise TypeError("matrix must be a matrix (list of lists) of integers/floats")
+                raise TypeError(
+                    "matrix must be a matrix (list of lists)"
+                    "of integers/floats"
+                )
             if len(row) != size:
-                raise TypeError("Each row of the matrix must have the same size")
+                raise TypeError(
+                        "Each row of the matrix must have the same size"
+                        )
 
             quotient = number / div
             quotient = round(quotient, 2)
