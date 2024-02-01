@@ -1,4 +1,4 @@
-#usr/bin/python3
+#!/usr/bin/python3
 """4-print_square.py
 
 This module contain a function for printing a square with the #
