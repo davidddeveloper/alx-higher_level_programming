@@ -10,6 +10,14 @@ functions it contained:
 
 
 def text_indentation(text):
+    """print text and two new line
+    if it sees '?' or '.' or ':'
+
+    Args:
+        - text: the text to print
+
+    """
+
     if type(text) != str:
         raise TypeError("text must be a string")
 
