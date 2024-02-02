@@ -11,7 +11,7 @@ function defined in square:
 
 def print_square(size):
     """prints a square with the #
-    
+
     Args:
         - size: size of the square
 
