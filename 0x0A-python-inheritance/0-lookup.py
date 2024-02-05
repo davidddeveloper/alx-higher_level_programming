@@ -10,7 +10,7 @@ the function contain in it:
 
 def lookup(obj):
     """A function for looking up the attributes in an object
-    
+
     Returns:
         A list containing the attributes
 
