@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""5-base_geometry.py
+"""6-base_geometry.py
 
 This module contain classes and methods related to geometry
 
