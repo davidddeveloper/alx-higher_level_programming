@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 """2-is_same_class.py
 
 This module contains a function for checking if an object
