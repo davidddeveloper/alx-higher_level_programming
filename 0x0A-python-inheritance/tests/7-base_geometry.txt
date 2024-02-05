@@ -36,4 +36,8 @@
 	Traceback (most recent call last):
 	TypeError: None must be an integer
 
+	>>> bg.integer_validator(2, True):
+	Traceback (most recent call last):
+	TypeError: bool must be an integer
+
 """
