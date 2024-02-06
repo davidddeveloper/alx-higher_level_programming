@@ -30,7 +30,7 @@ class Square(Rectangle):
         self.__size = size
         super().__init__(size, size)
 
-    def are():
+    def area():
         """Calculates the area of the square
 
         Returns:
