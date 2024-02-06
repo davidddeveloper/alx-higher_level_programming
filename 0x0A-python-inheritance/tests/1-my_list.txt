@@ -18,3 +18,33 @@
 
 	>>> my_list.print_sorted()
 	[1, 4]
+
+	>>> my_list.append(True)
+
+	>>> my_list.print_sorted()
+	[1, True, 4]
+
+	>>> my_list.append(False)
+
+	>>> my_list.print_sorted()
+	[False, 1, True, 4]
+
+	>>> my_list.append([4, 5])
+
+	>>> my_list.print_sorted()
+	Traceback (most recent call last):
+	TypeError: '<' not supported between instances of 'list' and 'bool'
+
+	>>> my_list = MyList()
+
+	>>> my_list.append(1)
+
+	>>> my_list.append(4)
+
+	>>> my_list.append({"Name": "David"})
+
+	>>> my_list.print_sorted()
+	Traceback (most recent call last):
+	TypeError: '<' not supported between instances of 'dict' and 'int'
+
+"""
