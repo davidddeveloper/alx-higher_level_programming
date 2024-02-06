@@ -10,6 +10,20 @@ classes contained in it:
 
 
 class Square(Rectangle):
+    """Represents a square
+
+    Args:
+        - size: the size of the square
+
+    Attributes:
+        - __size: the size of the square
+
+    Raises:
+        TypeError: if size is not an integer
+        ValueError: is size is less than or equal to zero
+
+    """
+
     def __init__(self, size):
         self.integer_validator("size", size)
         self.__size = size
