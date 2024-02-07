@@ -18,4 +18,5 @@ def class_to_json(obj):
         - the json representation
     """
 
-    return json.dumps(obj, default=lambda o: o.__dict__)
+    json_obj = json.dumps(obj, default=lambda o: o.__dict__)
+    return json.loads(json_obj)
