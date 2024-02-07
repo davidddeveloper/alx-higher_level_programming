@@ -15,6 +15,4 @@ def read_file(filename=""):
     """
 
     with open(filename) as f:
-        content = f.read()
-        if content != " ":
-            print(content)
+        print(f.read(), end="")
