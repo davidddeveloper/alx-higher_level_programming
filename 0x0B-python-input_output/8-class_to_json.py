@@ -5,7 +5,6 @@ This module provides a function for converting
 a custom class to json object
 
 """
-import json
 
 
 def class_to_json(obj):
@@ -18,5 +17,4 @@ def class_to_json(obj):
         - the json representation
     """
 
-    json_obj = json.dumps(obj, default=lambda o: o.__dict__)
-    return json.loads(json_obj)
+    return obj.__dict__
