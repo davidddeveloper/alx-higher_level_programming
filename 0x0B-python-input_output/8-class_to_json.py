@@ -2,7 +2,7 @@
 """8-class_to_json.py
 
 This module provides a function for converting
-a custome class to json object
+a custom class to json object
 
 """
 import json
