@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 """rectangle.py
 
 This module contain classes and method related to rectangle
@@ -6,6 +7,7 @@ classes it defined:
     - Rectangle: Represents a rectangle
 
 """
+import json
 from models.base import Base
 
 
@@ -144,7 +146,7 @@ class Rectangle(Base):
 
     def update(self, *args, **kwargs):
         try:
-            if args[0]:
+            if args.__len__() != 0:
                 self.id = args[0]
                 self.width = args[1]
                 self.height = args[2]
@@ -152,7 +154,6 @@ class Rectangle(Base):
                 self.y = args[4]
             else:
                 for key, value in kwargs.items():
-                    print(key)
                     if key == "height":
                         self.height = value
                     if key == "width":
@@ -167,6 +168,22 @@ class Rectangle(Base):
             pass
         except Exception as e:
             raise (e)
+
+    def to_dictionary(self):
+        """Represents the dictionary representation of the rectangle
+
+        Returns:
+            the dictionary representation
+
+        """
+
+        return {
+                'x': self.x,
+                'y': self.y,
+                'id': self.id,
+                'height': self.height,
+                'width': self.width
+                }
 
     def __str__(self):
         return "[{0}] ({1}) {5}/{4} - {2}/{3}".format(self.__class__.__name__, self.id, self.__width, self.__height, self.__y, self.__x)
