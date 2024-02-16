@@ -145,6 +145,8 @@ class Rectangle(Base):
             print("{}".format(self.__width * '#'))
 
     def update(self, *args, **kwargs):
+        """Updates an object"""
+
         try:
             if args.__len__() != 0:
                 self.id = args[0]
@@ -183,7 +185,8 @@ class Rectangle(Base):
                 'id': self.id,
                 'height': self.height,
                 'width': self.width
-                }
+        }
 
     def __str__(self):
-        return "[{0}] ({1}) {5}/{4} - {2}/{3}".format(self.__class__.__name__, self.id, self.__width, self.__height, self.__y, self.__x)
+        return "[{0}] ({1}) {5}/{4} - {2}/{3}".format(self.__class__.__name__,
+                self.id, self.__width, self.__height, self.__y, self.__x)

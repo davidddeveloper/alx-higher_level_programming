@@ -38,7 +38,8 @@ class Base:
 
         Returns:
             - JSON string representation of list_dictionaries
-            - otherwise if list_dictionaries is None or empty, return the string: "[]"
+            - otherwise if list_dictionaries is None or empty,
+            return the string: "[]"
 
         """
 
@@ -56,12 +57,13 @@ class Base:
 
         """
 
-        list_of_dict = [] # list of dictionary representation of obj
+        list_of_dict = []  # list of dictionary representation of obj
         for obj in list_objs:
             # get dictionary representation of the obj
             list_of_dict.append(obj.to_dictionary())
 
-        json_list_of_dict = cls.to_json_string(list_of_dict) # converts to json string
+        # converts to json string
+        json_list_of_dict = cls.to_json_string(list_of_dict)
 
         filename = cls.__name__ + ".json"
         with open(filename, 'w', encoding='UTF-8') as f:
@@ -89,15 +91,37 @@ class Base:
         """Creates and instance
 
         Args:
-            - dictionary: a kwargs containing all the values for the instance attributes
+            - dictionary: a kwargs containing
+            all the values for the instance attributes
 
         """
 
         if cls.__name__ == "Rectangle":
             dummy_instance = cls(5, 10)
 
-        else: # it is a square
+        else:  # it is a square
             dummy_instance = cls(10)
 
         dummy_instance.update(**dictionary)
         return dummy_instance
+
+    @classmethod
+    def load_from_file(cls):
+        """loads the JSON string representation of list of object from a file
+        to a python list
+
+
+        """
+
+        filename = cls.__name__ + ".json"
+        with open(filename, 'r', encoding="utf-8") as f:
+            # load json list of dict from a file with the class name
+            json_list_of_dict = json.load(f)
+
+        list_of_dict = cls.from_json_string(json_list_of_dict)
+        list_of_obj = []
+        for dictionary in list_of_dict:
+            # creates objects and save to a list
+            list_of_obj.append(cls.create(**dictionary))
+
+        return list_of_obj

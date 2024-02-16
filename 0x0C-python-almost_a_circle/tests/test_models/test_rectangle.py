@@ -157,3 +157,12 @@ class TestBase(unittest.TestCase):
 
         with self.assertRaises(ValueError):
             r1 = Rectangle.create(**dictionary)
+
+    def test_load_to_file(self):
+        r1 = Rectangle(10, 2, 1, 9, 10)
+        r2 = Rectangle(10, 7, 2, 8, 6)
+        list_rectangles_input = Rectangle.save_to_file([r1, r2])
+
+        file_path = os.path.join(os.path.dirname(__file__), '..', '..', 'Rectangle.json')
+
+        assert os.path.exists(file_path), "my_file.json does not exist"
