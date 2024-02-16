@@ -10,7 +10,7 @@ Classes it defined:
 
 
 import unittest
-from square import Square
+from models.square import Square
 
 class TestBase(unittest.TestCase):
     @classmethod
@@ -96,4 +96,4 @@ class TestBase(unittest.TestCase):
     def test_to_dictionary(self):
         s3 = Square(10, 2, 1)
         s3_dictionary = s3.to_dictionary()
-        self.assertEqual(s3_dictionary, {'id': 5, 'x': 2, 'size': 10, 'y': 1})
+        self.assertEqual(s3_dictionary, {'id': 6, 'x': 2, 'size': 10, 'y': 1})

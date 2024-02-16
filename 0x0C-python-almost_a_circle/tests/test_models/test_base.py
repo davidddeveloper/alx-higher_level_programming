@@ -9,7 +9,7 @@ Classes it defined:
 
 
 import unittest
-from base import Base
+from models.base import Base
 
 class TestBase(unittest.TestCase):
     def setUp(self):

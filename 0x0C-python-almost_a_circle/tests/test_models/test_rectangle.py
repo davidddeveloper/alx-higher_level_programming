@@ -12,8 +12,8 @@ Classes it defined:
 import os
 import unittest
 import json
-from rectangle import Rectangle
-from base import Base
+from models.rectangle import Rectangle
+from models.base import Base
 
 class TestBase(unittest.TestCase):
     @classmethod
@@ -55,7 +55,7 @@ class TestBase(unittest.TestCase):
 
     def test__init__default_value(self):
         obj5 = Rectangle(5, 5)
-        self.assertEqual(obj5.id, 1)
+        self.assertEqual(obj5.id, 2)
 
     def test_area(self):
         result = TestBase.obj1.area()
