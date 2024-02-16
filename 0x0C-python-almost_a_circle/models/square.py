@@ -50,6 +50,10 @@ class Square(Rectangle):
         self.__size = self.width
 
     def update(self, *args, **kwargs):
+        """sets values for all the object attributes
+
+        """
+
         try:
             if args.__len__() != 0:
                 self.id = args[0]
