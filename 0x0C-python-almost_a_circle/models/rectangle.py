@@ -188,5 +188,10 @@ class Rectangle(Base):
         }
 
     def __str__(self):
-        return "[{0}] ({1}) {5}/{4} - {2}/{3}".format(self.__class__.__name__,
-                self.id, self.__width, self.__height, self.__y, self.__x)
+        return "[{0}] ({1}) {5}/{4} - {2}/{3}".format(
+                self.__class__.__name__,
+                self.id,
+                self.__width,
+                self.__height,
+                self.__y, self.__x
+        )
