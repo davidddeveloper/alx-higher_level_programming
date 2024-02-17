@@ -116,9 +116,10 @@ class Base:
         filename = cls.__name__ + ".json"
         with open(filename, 'r', encoding="utf-8") as f:
             # load json list of dict from a file with the class name
-            if (filename.read() == ""):  # file is empty
-                return "[]"
+            if (f.read() == ""):  # file is empty
+                return []
 
+            f.seek(0)
             json_list_of_dict = json.load(f)
 
         list_of_dict = cls.from_json_string(json_list_of_dict)
