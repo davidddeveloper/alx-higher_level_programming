@@ -126,6 +126,10 @@ class Base:
             return []
 
         list_of_dict = cls.from_json_string(json_list_of_dict)
+
+        if list_of_dict == []:  # list is empty
+            return []
+
         list_of_obj = []
         for dictionary in list_of_dict:
             # creates objects and save to a list
