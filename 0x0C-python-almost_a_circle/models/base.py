@@ -122,13 +122,14 @@ class Base:
 
                 f.seek(0)
                 json_list_of_dict = json.load(f)
+
+                if json_list_of_dict == "[]":  # list is empty
+                    return []
+
         except FileNotFoundError:
             return []
 
         list_of_dict = cls.from_json_string(json_list_of_dict)
-
-        if list_of_dict == []:  # list is empty
-            return []
 
         list_of_obj = []
         for dictionary in list_of_dict:
