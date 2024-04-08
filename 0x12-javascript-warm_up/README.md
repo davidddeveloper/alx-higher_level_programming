@@ -1,6 +1,8 @@
 
 ![Javascript image](https://s3.amazonaws.com/intranet-projects-files/holbertonschool-higher-level_programming+/303/Javascript-535.png.jpeg)
 
+[![js-semistandard-style](https://raw.githubusercontent.com/standard/semistandard/master/badge.svg)](https://github.com/standard/semistandard)
+
 # Background Context
 JavaScript is used for many things. Here, you will use JavaScript for 2 reasons:
 
