@@ -1,4 +1,4 @@
-#!/usr/bin/env node
+#!/usr/bin/node
 
 let length_of_argv = process.argv.length;
 let result;
