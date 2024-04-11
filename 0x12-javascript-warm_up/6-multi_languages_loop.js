@@ -1,6 +1,10 @@
-let sentences = ["C is fun", "Python is cool", "JavaScript is amazing"]
+#!/usr/bin/env node
 
-for (let i = 0; i < 3; i++)
+const sentences = ["C is fun", "Python is cool", "JavaScript is amazing"];
+
+let i = 0;
+while (i < sentences.length)
 {
-  console.log(sentences[i]);
+        console.log(sentences[i]);
+        i++;
 }
