@@ -1,4 +1,4 @@
-#!/usr/bin/env node
+#!/usr/bin/node
 
 const argv = process.argv.slice(2);
 let left_operand = Number(argv[1]);
