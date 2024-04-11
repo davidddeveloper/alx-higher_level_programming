@@ -1,12 +1,11 @@
 #!/usr/bin/node
 
 const argv = process.argv.slice(2);
-let left_operand = Number(argv[1]);
-let right_operand = Number(argv[0]);
+const leftOperand = Number(argv[1]);
+const rightOperand = Number(argv[0]);
 
-function add(a, b)
-{
-        console.log(a + b);
+function add (a, b) {
+  console.log(a + b);
 }
 
-add(left_operand, right_operand);
+add(leftOperand, rightOperand);
