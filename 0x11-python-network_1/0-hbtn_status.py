@@ -15,6 +15,6 @@ if __name__ == "__main__":
         body = res.read()
 
         print('Body response:')
-        print("    - type: {}".format(type(body)))
-        print("    - content: {}".format(body))
-        print("    - content: {}".format(body.decode("utf-8")))
+        print("\t- type: {}".format(type(body)))
+        print("\t- content: {}".format(body))
+        print("\t- content: {}".format(body.decode("utf-8")))
