@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 """
 a Python script that fetches
 'https://alx-intranet.hbtn.io/status'
@@ -6,6 +7,14 @@ a Python script that fetches
 import urllib.request as re
 
 
-url = 'https://alx-intranet.hbtn.io/status'
-with re.urlopen(url) as response:
-  print(response.read())
+if __name__ == "__main__":
+    url = 'https://alx-intranet.hbtn.io/status'
+    req = re.Request(url)
+
+    with re.urlopen(req) as res:
+        body = res.read()
+
+        print('Body response:')
+        print("    - type: {}".format(body))
+        print("    - content: {}".format(body))
+        print("    - content: {}".format(body.decode("utf-8")))
