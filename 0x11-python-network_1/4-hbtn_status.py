@@ -10,5 +10,6 @@ if __name__ == "__main__":
     r = re.get('https://alx-intranet.hbtn.io/status')
     body = r.text
 
+    print("Body response:")
     print("    - type: {}".format(type(body)))
     print("    - content: {}".format(body))
