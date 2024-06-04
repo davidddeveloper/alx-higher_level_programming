@@ -4,7 +4,7 @@ const url = process.argv.slice(2)[0];
 const request = require('request');
 
 if (url !== undefined) {
-  request.get({ url, json: true }, (error, response, body) => {
+  request.get({ url: url, json: true }, (error, response, body) => {
     if (error) {
       console.log(error);
     }
