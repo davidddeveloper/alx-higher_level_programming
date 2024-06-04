@@ -7,6 +7,6 @@ const request = require('request');
 if (url !== undefined) {
   request.get(url)
     .on('response', (response) => {
-      console.log(response.statusCode);
+      console.log('code:', response.statusCode);
     });
 }
