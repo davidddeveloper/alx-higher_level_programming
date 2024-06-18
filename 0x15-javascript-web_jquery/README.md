@@ -23,7 +23,8 @@ jQuery can be install [locally](https://jquery.com/download/) or use via cdn (co
   
   like so
     
-```<!DOCTYPE html>
+```
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -35,5 +36,8 @@ jQuery can be install [locally](https://jquery.com/download/) or use via cdn (co
     <h1 id="h1">Hello Africa!</h1>
     <p>Welcome to story <span id="africa">Africa</span>!</p>
 </body>
-</html>```
+</html>
+```
+
+
     
