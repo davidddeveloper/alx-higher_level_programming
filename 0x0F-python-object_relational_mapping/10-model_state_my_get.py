@@ -28,7 +28,7 @@ if __name__ == '__main__':
     # list all states
     state = session.query(State).where(State.name == state_name).first()
     if state:
-        print('{}: {}'.format(state.id, state.name))
+        print(state.id)
     else:
         print("Not found")
     session.close()
