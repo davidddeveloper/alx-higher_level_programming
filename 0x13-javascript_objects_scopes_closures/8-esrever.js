@@ -6,4 +6,4 @@ exports.esrever = function (list) {
     newArr.push(list[i]);
   }
   return newArr;
-}
+};
