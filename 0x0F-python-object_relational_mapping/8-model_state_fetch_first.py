@@ -25,7 +25,6 @@ if __name__ == '__main__':
     session = Session()
 
     # list all states
-    states = session.query(State).all()
-    state = states[0]
+    state = session.query(State).first()
     print('{}: {}'.format(state.id, state.name))
     session.close()
