@@ -26,5 +26,8 @@ if __name__ == '__main__':
 
     # list all states
     state = session.query(State).first()
-    print('{}: {}'.format(state.id, state.name))
+    if state:
+        print('{}: {}'.format(state.id, state.name))
+    else:
+        print("Nothing")
     session.close()
