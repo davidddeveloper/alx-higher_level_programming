@@ -3,5 +3,5 @@
 let numberOfArgs = -1;
 exports.logMe = function (item) {
   numberOfArgs += 1;
-  console.log(numberOfArgs, item);
+  console.log(numberOfArgs + ':', item);
 };
