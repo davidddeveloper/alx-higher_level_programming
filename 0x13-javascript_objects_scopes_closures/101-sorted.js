@@ -2,14 +2,14 @@
 
 const dict = require('./101-data.js').dict;
 
-let new_dict = {};
-for (key of Object.keys(dict)) {
-  if (new_dict[dict[key]]) {
-    new_dict[dict[key]].push(key);
+const newDict = {};
+for (let key of Object.keys(dict)) {
+  if (newDict[dict[key]]) {
+    newDict[dict[key]].push(key);
   }
   else {
-    new_dict[dict[key]] = [key];
+    newDict[dict[key]] = [key];
   }
 }
 
-console.log(new_dict);
+console.log(newDict);
